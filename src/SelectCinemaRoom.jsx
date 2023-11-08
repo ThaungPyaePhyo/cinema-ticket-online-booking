@@ -60,10 +60,10 @@ export default function SelectCinemaRoom() {
     return (
         <div>
             <NavBar />
-            <div className="container-2xl mx-8">
+            <div className="container-2xl mx-20">
                 <div className="flex justify-between">
-                    <button className="rounded-2xl bg-blue-900 text-white p-3 mt-10" onClick={goBack}>Go Back</button>
-                    <button className="rounded-2xl bg-blue-900 text-white p-3 mt-10" onClick={() => goToMovieShowTimePage(movieId, selectedCinema, selectedRoom)}>Go to Movie Showtime</button>
+                    <button className="rounded-lg bg-blue-900 text-white p-3 mt-10" onClick={goBack}>Go Back</button>
+                    <button className="rounded-lg bg-blue-900 text-white p-3 mt-10" onClick={() => goToMovieShowTimePage(movieId, selectedCinema, selectedRoom)}>Go to Movie Showtime</button>
                 </div>
                 <div className="relative overflow-x-auto shadow-2xl sm:rounded-lg my-6">
                     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 my-10">
@@ -74,7 +74,7 @@ export default function SelectCinemaRoom() {
                                 return (
                                     <tr key={index} className={isCinemaSelected && !isRoomSelected ? "bg-red-100" : ""}>
                                         <td className="cursor-pointer" onClick={() => cinemaClickHandler(item.CinemaId)}>
-                                            <span className="mx-10 " >
+                                            <span className="mx-10 hover:text-blue-900 duration-700" >
                                                 <FontAwesomeIcon icon={faHeart} size="2x" className={`${isCinemaSelected ? "text-blue-900" : ""}`} />
                                             </span>
                                         </td>
@@ -87,7 +87,7 @@ export default function SelectCinemaRoom() {
                                         <td className="px-6 py-4 flex justify-start gap-4">
                                             {filterRoom.filter(roomItem => roomItem.CinemaId === item.CinemaId)
                                                 .map((room, roomIndex) => (
-                                                    <button className={`rounded  p-3 text-white ${selectedRoom.includes(room.RoomId) ? "bg-blue-900" : "bg-slate-400"}`} onClick={() => roomClickHandler(room.RoomId)} key={roomIndex}>{room.RoomName}</button>
+                                                    <button className={`px-4 py-2 rounded-lg text-white hover:bg-blue-900 transform hover:scale-105 hover:transition-transform duration-700 ${selectedRoom.includes(room.RoomId) ? "bg-blue-900" : "bg-slate-400"}`} onClick={() => roomClickHandler(room.RoomId)} key={roomIndex}>{room.RoomName}</button>
                                                 ))}
                                         </td>
 

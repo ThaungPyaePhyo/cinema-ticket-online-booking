@@ -37,9 +37,9 @@ export default function MovieShowTime() {
     return (
         <div>
             <NavBar />
-            <div className="container-2xl mx-8">
+            <div className="container-2xl mx-20">
                 <div className="flex justify-between">
-                    <button className="rounded-2xl bg-blue-900 text-white p-3 mt-10" onClick={goBack}>Go Back</button>
+                    <button className="rounded-lg bg-blue-900 text-white p-3 mt-10" onClick={goBack}>Go Back</button>
                 </div>
                 <div className="my-10 font-bold text-3xl">
                     <h1>{filterCinema[0].CinemaName}</h1>
@@ -53,12 +53,12 @@ export default function MovieShowTime() {
                             const dateOptions = { year: "numeric", month: "long", day: "numeric" };
                             const displayShowDate = showDate ? showDate.toLocaleDateString(undefined, dateOptions) : "N/A"
                             return (
-                                <div className="overflow-x-auto shadow-2xl p-10 my-6" key={key}>
+                                <div className="overflow-hidden border rounded-lg shadow-lg p-6 my-6 transform hover:scale-105 duration-700" key={key}>
                                     <div className="">
                                         <h1 className="font-bold text-2xl text-purple-500 py-2">{roomInfo.RoomName}</h1>
                                         <h1 className="font-bold text-lg py-2">Movie Show Time</h1>
                                         <h1 className="py-2">Show Date - {displayShowDate}</h1>
-                                        <select name="" id=""  defaultValue={'default'} className="bg-gray-50 border p-2 my-3 border-gray-500 text-gray-900 w-full"
+                                        <select name="" id="" defaultValue={'default'} className="block w-full bg-gray-200 text-gray-900 border border-gray-300 rounded-lg py-2 px-3 mb-3"
                                         onChange={(event) => selectHandler(event.target.value)}>
                                                     <option value="default" disabled>Choose an option</option>
 

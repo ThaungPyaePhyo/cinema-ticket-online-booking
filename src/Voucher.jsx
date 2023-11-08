@@ -48,14 +48,14 @@ export default function Voucher() {
     return (
         <div>
             <NavBar />
-            <div className="container-2xl mx-8">
+            <div className="container-2xl mx-20">
                 <div className="flex justify-between">
                     <button className="rounded-lg bg-blue-900 text-white p-3 mt-10" onClick={() => goBackHandler()}>Go Back</button>
                 </div>
                 <div className="grid grid-cols-4 gap-5 my-10">
                     {
                         mergedData.map((item, key) => (
-                            <div className="flex justify-star shadow-md shadow-orange-300" key={key}>
+                            <div className="flex justify-star shadow-md shadow-orange-300 transform hover:scale-105 duration-700" key={key}>
 
                                 <div className="mx-6 my-8 leading-8" >
                                     <h1 className="text-2xl font-bold">Voucher</h1>

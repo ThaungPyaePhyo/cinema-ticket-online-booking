@@ -112,7 +112,7 @@ export default function Seat() {
         );
 
         const table = (
-            <table className="w-1/2 text-sm text-left text-gray-500 dark:text-gray-400 my-10 mx-10">
+            <table className="w-1/2 text-sm text-left my-10 mx-10">
                 <thead>
                     <tr>
                         <th className="border">Chosen Seats</th>
@@ -138,9 +138,9 @@ export default function Seat() {
     return (
         <div>
             <NavBar />
-            <div className="container-2xl mx-8">
-                <div className="flex justify-between">
-                    <button className="rounded-lg bg-blue-900 text-white p-3 mt-10" onClick={() => goBackHandler()}>Go Back</button>
+            <div className="container-2xl mx-20">
+                <div className="flex justify-between ">
+                    <button className="rounded bg-blue-900 text-white p-3 my-10" onClick={() => goBackHandler()}>Go Back</button>
                 </div>
                 <div className="flex justify-center">
                     <div className="w-screen h-40 bg-black flex items-center justify-center mx-28">
@@ -155,7 +155,7 @@ export default function Seat() {
                         {
                             firstColumn.map((item, key) => (
                                 <div className="my-4 cursor-pointer" key={key} onClick={() => seatHandler(item.SeatId)}>
-                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-500"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
+                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-400"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
                                 </div>
                             ))
                         }
@@ -164,7 +164,7 @@ export default function Seat() {
                         {
                             secondColumn.map((item, key) => (
                                 <div className="my-4 cursor-pointer" key={key} onClick={() => seatHandler(item.SeatId)}>
-                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-500"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
+                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-400"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
                                 </div>
                             ))
                         }
@@ -173,7 +173,7 @@ export default function Seat() {
                         {
                             thirdColumn.map((item, key) => (
                                 <div className={`my-4 cursor-pointer `} key={key} onClick={() => seatHandler(item.SeatId)}>
-                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-500"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
+                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-400"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
                                 </div>
                             ))
                         }
@@ -184,7 +184,7 @@ export default function Seat() {
                         {
                             CoupleFilteredSeats.map((item, key) => (
                                 <div className="my-4 cursor-pointer" key={key} onClick={() => seatHandler(item.SeatId)}>
-                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-500"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
+                                    <span className={`rounded-lg ${selectedSeat.includes(item.SeatId) ? "bg-blue-900" : "bg-slate-400"}  text-white p-4`}>{item.RowName}{item.SeatNo}</span>
                                 </div>
                             ))
                         }

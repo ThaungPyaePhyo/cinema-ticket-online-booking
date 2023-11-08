@@ -22,7 +22,7 @@ export default function Map() {
     return (
         <div>
             <NavBar/>
-            <button className="rounded-2xl bg-blue-900 text-white p-3 mt-4 mx-20" onClick={() => backHandler()}>Go Back</button>
+            <button className="rounded bg-blue-900 text-white p-3 mt-4 mx-20" onClick={() => backHandler()}>Go Back</button>
             <div className="container-2xl mx-20 my-14">
             <iframe src={mapURL}  height="650" className="w-full"
              loading="lazy" 
